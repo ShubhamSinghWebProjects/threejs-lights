@@ -28,7 +28,7 @@ document.body.appendChild(stats.dom);
  */
 
 const textureLoader = new THREE.TextureLoader()
-const texture = textureLoader.load('/textures/matcaps/3.png')
+const texture = textureLoader.load(`${BASE_PATH}/textures/matcaps/3.png`)
 
 /**
  * Base
