@@ -4,7 +4,7 @@ import * as dat from 'lil-gui'
 import Stats from 'stats.js'
 // import { RectAreaLightHelper } from 'three/addons/helpers/RectAreaLightHelper.js';
 
-
+const BASE_PATH = '/threejs-lights'
 
 /**
  LOW COST PERFORMANCE LIGHTS
@@ -57,21 +57,14 @@ AxesHelperFolder.add(AxesHelper, 'visible').name('Axes Helper Visible');
  *     - Doesn't have a direction
  *     - Doesn't cast shadows
  * 
+
+White ambient light simulating the even lighting from the sky, intensity is very low because we don't want to wash out our other lights
+
+A warm, slightly yellowish light simulating the sun. Intensity is slightly stronger.
+
+A light blue and green hemisphere light simulating the ground reflecting light from the sun.
+It also helps to highlight undersides of objects that the directional light can't reach.
  */
-// // White ambient light simulating the even lighting from the sky, intensity is very low because we don't want to wash out our other lights
-// const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
-// scene.add(ambientLight);
-// gui.add(ambientLight, 'intensity').min(0).max(1).step(0.001).name('Ambient Light Intensity');
-
-// // A warm, slightly yellowish light simulating the sun. Intensity is slightly stronger.
-// const directionalLight = new THREE.DirectionalLight(0xfff4e6, 0.6);
-// directionalLight.position.set(1, 0.25, 0);
-// scene.add(directionalLight);
-
-// // A light blue and green hemisphere light simulating the ground reflecting light from the sun.
-// // It also helps to highlight undersides of objects that the directional light can't reach.
-// const hemisphereLight = new THREE.HemisphereLight(0x87ceeb, 0x228b22, 0.2);
-// scene.add(hemisphereLight);
 
 // Dark blue ambient light, a bit stronger to make up for the lack of a strong directional light
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
